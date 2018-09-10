@@ -25,6 +25,14 @@ public class ServiceAccount implements IServiceAccount{
 		
 	
 	
+	public ServiceAccount(@NotNull String account, @NotNull BigDecimal balance, @NotNull String documentNumber,	@NotNull String name, @NotNull String surname) {
+		this.account = account;
+		this.balance = balance;
+		this.documentNumber = documentNumber;
+		this.name = name;
+		this.surname = surname;
+	}
+
 	@Override
 	public String getDocumentNumber() {
 		return documentNumber;

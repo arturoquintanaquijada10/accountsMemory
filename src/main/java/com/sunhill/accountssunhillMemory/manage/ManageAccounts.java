@@ -18,6 +18,7 @@ import org.springframework.stereotype.Component;
 
 
 import com.sunhill.accountssunhillMemory.dto.Account;
+import com.sunhill.accountssunhillMemory.dto.IAccount;
 import com.sunhill.accountssunhillMemory.dto.Balance;
 import com.sunhill.accountssunhillMemory.dto.NumberAccount;
 import com.sunhill.accountssunhillMemory.dto.Owner;
@@ -39,25 +40,24 @@ public class ManageAccounts {
 	@Autowired
 	KeyValueOperations keyValueTemplate;	
 	
-	public  JSONObject createAccount(Account oAccount) {
-		
+	public  JSONObject createAccount(Account oAccount) {		
 		keyValueTemplate.insert(oAccount);				
 		JSONObject jAccount = new JSONObject();
-		jAccount.put(Constants.RESPONSE_RESULT, env.getProperty("app.message.account.created"));
-		
+		jAccount.put(Constants.RESPONSE_RESULT, env.getProperty("app.message.account.created"));		
 		return jAccount;
-		
-		
 	}	
 	
+	
+	
 	public  Account getAccount(String account) throws GenericException {	
-		
-		Account oAccount=keyValueTemplate.findById(account, Account.class).get();
-		if(oAccount==null){
+		Account oAccount=null;
+		try{
+			oAccount=keyValueTemplate.findById(account, Account.class).get();
+			if(oAccount==null){   throw new GenericException(env.getProperty("app.message.error.notfound"));	}	
+		}catch(Exception e){
 			throw new GenericException(env.getProperty("app.message.error.notfound"));
-		}	
+		}
 		return oAccount;	
-
 	}	
 	
 	
