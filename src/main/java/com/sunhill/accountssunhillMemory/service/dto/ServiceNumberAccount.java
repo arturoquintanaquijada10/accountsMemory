@@ -1,18 +1,21 @@
 package com.sunhill.accountssunhillMemory.service.dto;
 
-import javax.validation.constraints.NotNull;
-
 public class ServiceNumberAccount {
 	
-	@NotNull
-	private String account;
+	private String accountNumber;
+		
+	public ServiceNumberAccount(String accountNumber) {		
+		this.accountNumber = accountNumber;
+	}
+	
+	public ServiceNumberAccount() {	}
 
-	public String getAccount() {
-		return account;
+	public String getAccountNumber() {
+		return accountNumber;
 	}
 
-	public void setAccount(String account) {
-		this.account = account;
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 	
 	

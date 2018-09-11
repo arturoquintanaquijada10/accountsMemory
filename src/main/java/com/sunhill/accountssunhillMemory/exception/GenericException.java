@@ -2,6 +2,7 @@ package com.sunhill.accountssunhillMemory.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 
 
 
@@ -17,6 +18,7 @@ public class GenericException extends Exception {
 	private  String  code ="error";	
 	private  String type="";	
 	private  String message ="";		
+	private HttpStatus status=null;
 	
 	
 	public GenericException() { super(); }
@@ -29,6 +31,12 @@ public class GenericException extends Exception {
 	public GenericException(String message, Throwable cause) {
 		super(message, cause); 
 		manageException( message,  cause);		
+	}
+	
+	public GenericException(String message, HttpStatus status) {
+		super(message); 
+		this.status=status;
+		manageException( message,  new Exception());		
 	}
 	
 	public GenericException(Throwable cause) {
@@ -64,6 +72,15 @@ public class GenericException extends Exception {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public HttpStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(HttpStatus status) {
+		this.status = status;
 	}	
+	
 	
 }

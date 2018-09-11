@@ -15,14 +15,14 @@ public class ServiceTransfers {
 	@NotNull
 	private BigDecimal amount;
 	
-	
-
 	public ServiceTransfers(@NotNull String accountFrom, @NotNull String accountTo, @NotNull BigDecimal amount) {
 		super();
 		this.accountFrom = accountFrom;
 		this.accountTo = accountTo;
 		this.amount = amount;
 	}
+
+	public ServiceTransfers(){}
 
 	public String getAccountFrom() {
 		return accountFrom;

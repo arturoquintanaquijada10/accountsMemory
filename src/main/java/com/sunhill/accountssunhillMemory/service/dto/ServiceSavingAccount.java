@@ -10,7 +10,9 @@ public class ServiceSavingAccount extends ServiceAccount{
 			@NotNull String name, @NotNull String surname, @NotNull BigDecimal interest) {
 		super(account, balance, documentNumber, name, surname);
 		this.interest = interest;
-	}
+	}	
+		
+	public ServiceSavingAccount(){}
 
 	@NotNull
 	private BigDecimal interest;

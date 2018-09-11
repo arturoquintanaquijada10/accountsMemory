@@ -13,6 +13,8 @@ public class Owner {
 		this.surname=surname;
 	}
 	
+	public Owner (){}
+	
 	public String getDocumentNumber() {
 		return documentNumber;
 	}

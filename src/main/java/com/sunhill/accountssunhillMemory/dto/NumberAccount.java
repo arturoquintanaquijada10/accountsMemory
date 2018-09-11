@@ -11,6 +11,8 @@ public class NumberAccount {
 		super();
 		this.account = account;
 	}
+	
+	public NumberAccount() {}
 
 	public String getAccount() {
 		return account;

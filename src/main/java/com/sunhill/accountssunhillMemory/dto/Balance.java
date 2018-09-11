@@ -17,6 +17,8 @@ public class Balance {
 		this.account = account;
 		this.amount = amount;
 	}
+	
+	public Balance() {}
 
 	public String getAccount() {
 		return account;

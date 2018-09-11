@@ -2,7 +2,6 @@ package com.sunhill.accountssunhillMemory.dto;
 
 import java.math.BigDecimal;
 
-
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.data.annotation.Id;
 
@@ -24,6 +23,8 @@ public class Account implements IAccount{
 		this.accountType = accountType;
 		this.extra = extra;
 	}	
+	
+	public Account(){}	
 	
 	@Override
 	@Required

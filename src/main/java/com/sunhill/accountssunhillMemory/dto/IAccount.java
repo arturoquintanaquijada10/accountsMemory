@@ -2,8 +2,6 @@ package com.sunhill.accountssunhillMemory.dto;
 
 import java.math.BigDecimal;
 
-import org.springframework.beans.factory.annotation.Required;
-
 public interface IAccount {	
 	
 	public String getAccount();

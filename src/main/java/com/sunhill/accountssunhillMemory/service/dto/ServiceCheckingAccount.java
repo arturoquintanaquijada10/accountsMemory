@@ -8,11 +8,12 @@ public class ServiceCheckingAccount extends ServiceAccount{
 	
 	private BigDecimal limit;
 	
-	
-
 	public ServiceCheckingAccount(@NotNull String account, @NotNull BigDecimal balance, @NotNull String documentNumber,	@NotNull String name, @NotNull String surname, BigDecimal limit) {
 		super(account, balance, documentNumber, name, surname);
 		this.limit = limit;
+	}
+
+	public ServiceCheckingAccount(){
 	}
 
 	public BigDecimal getLimit() {

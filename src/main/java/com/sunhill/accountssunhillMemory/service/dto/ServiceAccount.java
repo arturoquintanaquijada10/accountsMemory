@@ -23,6 +23,7 @@ public class ServiceAccount implements IServiceAccount{
 	@NotNull
 	private String surname;
 		
+	public ServiceAccount(){}
 	
 	
 	public ServiceAccount(@NotNull String account, @NotNull BigDecimal balance, @NotNull String documentNumber,	@NotNull String name, @NotNull String surname) {
@@ -32,7 +33,8 @@ public class ServiceAccount implements IServiceAccount{
 		this.name = name;
 		this.surname = surname;
 	}
-
+	
+	
 	@Override
 	public String getDocumentNumber() {
 		return documentNumber;

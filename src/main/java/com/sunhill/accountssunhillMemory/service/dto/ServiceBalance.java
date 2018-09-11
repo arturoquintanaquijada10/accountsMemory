@@ -10,8 +10,16 @@ public class ServiceBalance {
 	private String account;	
 		
 	@NotNull
-	private BigDecimal amount;
+	private BigDecimal amount;	
 	
+
+	public ServiceBalance(@NotNull String account, @NotNull BigDecimal amount) {
+		super();
+		this.account = account;
+		this.amount = amount;
+	}
+	
+	public ServiceBalance() {}
 
 	public String getAccount() {
 		return account;

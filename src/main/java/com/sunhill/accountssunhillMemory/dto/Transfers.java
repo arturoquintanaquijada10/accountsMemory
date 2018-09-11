@@ -22,6 +22,8 @@ public class Transfers {
 		this.accountTo = accountTo;
 		this.amount = amount;
 	}
+	
+	public Transfers(){	}
 
 	public String getAccountFrom() {
 		return accountFrom;
