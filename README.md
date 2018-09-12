@@ -9,5 +9,5 @@ API Rest for Accounts management.
 - **SPRING-BOOT : 	2.0.4.RELEASE**
 - **SPRING-DATA : 	2.0.6.RELEASE**
 - **no phisical data base  : Spring-data-key-value (in memory)**
-- **SWAGGER  :  http://localhost:8080/swagger-ui.html**
+- **API documentation with SWAGGER  :  http://localhost:8080/swagger-ui.html**
 - **JUNIT TEST included**
