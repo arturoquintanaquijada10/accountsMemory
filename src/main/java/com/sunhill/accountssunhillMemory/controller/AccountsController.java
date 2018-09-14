@@ -56,7 +56,7 @@ public class AccountsController {
 	}
 
 	@RequestMapping( value = "/accounts/getAccount", method = RequestMethod.GET )
-	@ApiOperation("Calculate interest for savings accounts")
+	@ApiOperation("Get account details")
 	public ResponseEntity<Object> getAccount( @ApiParam(value = "account", required = true) @RequestParam(value="account")  String account) throws GenericException{
 		return  new ResponseEntity<>(oManageAccounts.getAccountJS( account), HttpStatus.OK);	
 	}
